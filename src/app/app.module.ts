@@ -1,33 +1,33 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import { SimRacingChampApp } from './app.component';
 
-import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
-
+/* APP PLUGINS */
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { DatePicker } from '@ionic-native/date-picker';
+import { Toast } from '@ionic-native/toast';
+import { UtilsModule } from '../utils/utils.module';
 
 @NgModule({
   declarations: [
-    MyApp,
-    HomePage,
-    ListPage
+    SimRacingChampApp
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp),
+    IonicModule.forRoot(SimRacingChampApp),
+    UtilsModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    MyApp,
-    HomePage,
-    ListPage
+    SimRacingChampApp
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    DatePicker,
+    Toast,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
