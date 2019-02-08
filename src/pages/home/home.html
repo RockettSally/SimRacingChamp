@@ -15,6 +15,20 @@
 
 <ion-content>
   <ion-item no-lines>
+    <ion-card (click)="accessPage('DivisionListPage')" color="division" padding-horizontal>
+      <ion-card-title><b>Divisions</b></ion-card-title>
+      <ion-card-content text-right>
+        View Divisions&nbsp;&nbsp;<ion-icon name="log-in"></ion-icon>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card (click)="accessPage('CategoryListPage')" color="category" padding-horizontal>
+      <ion-card-title><b>Categories</b></ion-card-title>
+      <ion-card-content text-right>
+        View Categories&nbsp;&nbsp;<ion-icon name="log-in"></ion-icon>
+      </ion-card-content>
+    </ion-card>
+
     <ion-card (click)="accessPage('ChampListPage')" color="championship" padding-horizontal>
       <ion-card-title><b>Championships</b></ion-card-title>
       <ion-card-content text-right>

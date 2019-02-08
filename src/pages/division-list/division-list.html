@@ -1,0 +1,22 @@
+<!--
+  Generated template for the DivisionListPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="division">
+    <ion-title>Divisions</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-item *ngFor="let division of divisionList()">
+    <b>{{division?.id}}</b> | {{division?.name}}
+  </ion-item>
+  <ion-fab bottom right>
+    <button (click)="accessDivisionForm('create')" ion-fab color="secondary">
+      <ion-icon name="add-circle"></ion-icon>
+    </button>
+  </ion-fab>
+</ion-content>
